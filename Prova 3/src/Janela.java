@@ -3,8 +3,8 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 
 public class Janela extends JFrame{
-	protected PainelCartas painel1= new PainelCartas();
-	protected Painel painel2= new Painel();
+	protected PainelCartas painel1= new PainelCartas(this);
+	protected Painel painel2= new Painel(this);
 	public Janela() {
 		setTitle("Jogo de Cartas");
 		setLayout(new BorderLayout());
