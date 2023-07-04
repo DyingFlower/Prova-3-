@@ -1,7 +1,11 @@
+package view;
+
 import java.util.ArrayList;
 
 public class Galeria {
-	protected ArrayList lista;
+
+	protected ArrayList<String> lista;
+
 	public Galeria() {
 		lista = new ArrayList<String>();
 	}
