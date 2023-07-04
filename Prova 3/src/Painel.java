@@ -1,4 +1,4 @@
-package view;
+
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -10,18 +10,17 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class Painel extends JPanel {
-	public Painel() {
-		JButton botao = new JButton();
-		botao.setText("Avançar");
+	protected Janela janela; // necessario para interagir com a janela.
+	public Painel(Janela janela) {
+		this.janela=janela;
 		JLabel frase = new JLabel();
 		frase.setText("Descreva a Carta marcada");
 		JTextField texto = new JTextField();
 		JButton botaoPassarVez = new JButton("Passar a Vez");
 		botaoPassarVez.addActionListener(new PassarVez());
-		setLayout(new GridLayout(1, 4));
+		setLayout(new GridLayout(1, 3));
 		add(frase);
 		add(texto);
-		add(botao);
 		add(botaoPassarVez);
 		setBackground(Color.pink);
 		setVisible(true);
@@ -31,8 +30,8 @@ public class Painel extends JPanel {
 class PassarVez implements ActionListener{
 
 	public void actionPerformed(ActionEvent e) {
-		System.exit(0);
-		//fazer o action para que o outro jogadador possa jogar, escondendo as cartas do jogador anterior e mostrando as sdele
+		
 	}
+	
 	
 }
