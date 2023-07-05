@@ -1,4 +1,4 @@
-package view;
+
 
 import java.awt.Color;
 import java.awt.GridLayout;
@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -14,8 +15,7 @@ public class PainelCartas extends JPanel {
 	protected ArrayList<Carta> cartas = new ArrayList<Carta>();
 	protected Janela janela;
 
-	public PainelCartas(Janela janela) {
-		this.janela = janela;
+	public PainelCartas() {
 		for (int i = 0; i < 6; i++) {
 			Carta carta = new Carta(
 					"/img/wp9170585-ordem-paranormal-wallpapers.jpg");

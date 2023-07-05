@@ -1,4 +1,4 @@
-package view;
+
 
 import java.awt.Color;
 import java.awt.GridLayout;
@@ -20,8 +20,8 @@ public class Painel extends JPanel {
 		frase.setText("Descreva a Carta marcada");
 		JTextField texto = new JTextField();
 		descricaoCarta = texto.getText();
-		JButton botaoPassarVez = new JButton("Passar a Vez");
-		botaoPassarVez.addActionListener(new PassarVez());
+		JButton botaoPassarVez = new JButton("Passar a Vez"); // seria interessante criar uma classe pra esse botão, ja que vai criar varias janelas varias vezes.
+		botaoPassarVez.addActionListener(PassarVez);
 		setLayout(new GridLayout(1, 3));
 		add(frase);
 		add(texto);
@@ -29,22 +29,14 @@ public class Painel extends JPanel {
 		setBackground(Color.pink);
 		setVisible(true);
 	}
-	
-	public String getDescricaoCarta() {
-		return descricaoCarta;
-	}
-}
 
-class PassarVez implements ActionListener {
+	ActionListener PassarVez = new ActionListener() {
 
-	public void actionPerformed(ActionEvent e) {
-		Janela j = new Janela();
-		Painel painel = new Painel(j);
-		JanelaR janelaSecundaria = new JanelaR(painel);
-		janelaSecundaria.setVisible(true);
-		j.setVisible(false);
-		// fazer o action para que o outro jogadador possa jogar, escondendo as cartas
-		// do jogador anterior e mostrando as sdele
-	}
+		public void actionPerformed(ActionEvent e) {
+			JanelaJogador2 janelaSecundaria = new JanelaJogador2(descricaoCarta);
+			janelaSecundaria.setVisible(true);
+			janela.dispose(); // fechar janela aberta e abrir uma nova
+		}
+	};
 
 }

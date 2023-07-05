@@ -1,9 +1,8 @@
-package view;
+
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JLabel;
 
 public class Carta extends JButton{
 		
@@ -25,4 +24,3 @@ public class Carta extends JButton{
 			setVisible(true);
 		}
 	}
-

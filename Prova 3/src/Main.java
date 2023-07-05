@@ -1,9 +1,9 @@
-package view;
 
 public class Main {
 
 	public static void main(String[] args) {
-		new Janela();
+		Janela janela = new Janela();
+
 	}
 
 }
