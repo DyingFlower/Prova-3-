@@ -9,11 +9,11 @@ import javax.swing.JLabel;
 
 public class Janela extends JFrame {
 	protected PainelCartas painel1 = new PainelCartas();
-	protected Painel painel2 = new Painel(this);
+	protected Painel painel2 = new Painel(this,painel1);
 	protected List<Jogador> jogadores;
 	private JLabel jogadorLabel;
 	protected int jogadorDaVez = 0;
-
+	protected Jogador jogador;
 	public Janela() {
 		setTitle("Jogo de Cartas");
 		setLayout(new BorderLayout());

@@ -7,11 +7,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class JanelaJogador2 extends JFrame { 
+	protected JFrame janela1;
 	protected Painelresposta painelJanelaR;
 	protected PainelCartas painelcartas;
-	public JanelaJogador2(String descricaocarta) {
+	protected Jogador jogador;
+	public JanelaJogador2(String descricaocarta,JFrame janela1) {
 		setTitle("Jogo de Cartas");
-		painelJanelaR = new Painelresposta(descricaocarta);
+		painelJanelaR = new Painelresposta(descricaocarta, this);
 		painelcartas= new PainelCartas();
 		setLayout(new BorderLayout());
 		add(painelJanelaR,BorderLayout.NORTH);	

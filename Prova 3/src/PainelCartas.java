@@ -15,7 +15,6 @@ public class PainelCartas extends JPanel {
 	protected ArrayList<Carta> cartas = new ArrayList<>();
 	protected Janela janela;
 	protected int jogadorDaVez;
-
 	public PainelCartas() {
 		String[] arquivos = { "/imagens/apito.jpg", "/imagens/banaja.jpg", "/imagens/banato.jpg", "/imagens/banema.jpg",
 				"/imagens/barulho.jpg", "/imagens/baskete.jpg", "/imagens/coelhujo.jpg", "/imagens/drake.jpg",
